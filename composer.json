@@ -1,0 +1,62 @@
+{
+    "name": "jeffersongoncalves/laravel-whatsapp-widget",
+    "description": "This Laravel package provides a simple yet customizable WhatsApp widget for your website. It allows you to easily add a clickable WhatsApp button or floating widget to connect visitors directly with your WhatsApp account. The widget is designed to be easily integrated into your Laravel application and is fully customizable to match your website's design.",
+    "keywords": [
+        "jeffersongoncalves",
+        "laravel",
+        "laravel-whatsapp-widget"
+    ],
+    "homepage": "https://github.com/jeffersongoncalves/laravel-whatsapp-widget",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jefferson Gonçalves",
+            "email": "gerson.simao.92@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3",
+        "laravel/framework": "^11.0|^12.0",
+        "spatie/laravel-package-tools": "^1.14.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.0",
+        "orchestra/testbench": "^9.0|^10.0",
+        "pestphp/pest": "^3.7.4",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JeffersonGoncalves\\WhatsappWidget\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "JeffersonGoncalves\\WhatsappWidget\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "post-autoload-dump": "@php ./vendor/bin/testbench package:discover --ansi",
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "JeffersonGoncalves\\WhatsappWidget\\WhatsappWidgetServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
