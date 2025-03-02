@@ -26,12 +26,12 @@
     "src": "resources/images/whatsapp.svg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-23a3a142.js",
+    "file": "assets/app-71f58fa0.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/wa-redirect.js": {
-    "file": "assets/wa-redirect-b53437ee.js",
+    "file": "assets/wa-redirect-08fedddd.js",
     "isEntry": true,
     "src": "resources/js/wa-redirect.js"
   },

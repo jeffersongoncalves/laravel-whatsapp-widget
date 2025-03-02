@@ -11,7 +11,6 @@ class WhatsappWidgetServiceProvider extends PackageServiceProvider
     {
         $package->name('whatsapp-widget')
             ->hasMigration('create_whatsapp_agents_table')
-            ->hasMigration('create_whatsapp_logs_table')
             ->hasConfigFile('whatsapp-widget')
             ->hasAssets()
             ->hasViews()

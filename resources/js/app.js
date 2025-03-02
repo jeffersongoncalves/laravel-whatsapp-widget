@@ -76,58 +76,8 @@ import jQuery from 'jquery';
         $('input.input-views').each(function() {
             var $this = $(this);
             $this.on('keypress', ForNumbers, false);
-
-            console.log('anu mas')
         })
-
-        if( jQuery('.ww-whatsapp-content').length > 0 || jQuery('.ww-std').length > 0 ){
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'https://get.geojs.io/v1/ip/geo.js?callback=ww_whatsapp_callback';
-            var h = document.getElementsByTagName('script')[0];
-            h.parentNode.insertBefore(script, h);
-        }
     });
 })(jQuery);
-
-function ww_whatsapp_callback(data){
-    "use strict";
-    var geo = data;
-
-    var agents = [];
-    var numbers = [];
-    if( jQuery('.ww-whatsapp-button').length > 0 ){
-        jQuery.each( jQuery('.ww-whatsapp-button'), function(key, button){
-            agents.push( jQuery(button).attr('data-agent') );
-            numbers.push( jQuery(button).attr('data-number') );
-        });
-
-        const rot_data = "agent="+agents+"&number="+numbers+"&geo="+JSON.stringify(geo)+"&type=view&ref="+window.location.href;
-
-        jQuery.ajax({
-            async: true,
-            url: ww_whatsapp_chat,
-            type: 'POST',
-            data: rot_data,
-        });
-    }
-    else if( jQuery('.ww-wa-button').length > 0 ){
-        jQuery.each( jQuery('.ww-wa-button'), function(key, button){
-            agents.push( jQuery(button).attr('data-agent') );
-            numbers.push( jQuery(button).attr('data-number') );
-        });
-
-        const rot_data = "agent="+agents+"&number="+numbers+"&geo="+JSON.stringify(geo)+"&type=view&ref="+window.location.href;
-
-        jQuery.ajax({
-            async: true,
-            url: ww_whatsapp_chat,
-            type: 'POST',
-            data: rot_data,
-        });
-    }
-}
-
-window.ww_whatsapp_callback = ww_whatsapp_callback;
 
 import.meta.glob(['../images/**', '../midia/**']);
