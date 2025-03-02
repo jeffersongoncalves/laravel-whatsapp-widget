@@ -23,6 +23,7 @@ class WhatsappsController
                 'link' => $whatsappAgent->getLinkByWhatsappAgent($whatsappAgent, $ref),
             ];
         }
+
         return response()->json($data);
     }
 }

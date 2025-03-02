@@ -11,7 +11,9 @@ class WhatsappLog extends Model
         'number' => 'json',
         'geo' => 'json',
     ];
+
     protected $table = 'whatsapp_logs';
+
     protected $fillable = [
         'agent',
         'number',

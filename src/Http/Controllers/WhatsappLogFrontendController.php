@@ -2,10 +2,10 @@
 
 namespace JeffersonGoncalves\WhatsappWidget\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use JeffersonGoncalves\WhatsappWidget\Http\Requests\WhatsappLogRequest;
 use JeffersonGoncalves\WhatsappWidget\Models\WhatsappLog;
+
 use function abort_if;
 use function config;
 

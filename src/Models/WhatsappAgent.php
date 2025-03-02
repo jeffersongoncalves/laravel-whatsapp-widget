@@ -25,6 +25,7 @@ class WhatsappAgent extends Model
         if (empty($this->image)) {
             return null;
         }
+
         return Storage::disk(config('whatsapp-widget.disk'))->url($this->image);
     }
 
