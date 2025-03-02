@@ -1,0 +1,42 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-cdf0212e.css",
+    "isEntry": true,
+    "src": "resources/css/app.css"
+  },
+  "resources/css/wa-redirect.css": {
+    "file": "assets/wa-redirect-73519648.css",
+    "isEntry": true,
+    "src": "resources/css/wa-redirect.css"
+  },
+  "resources/images/whatsapp-icon-a.svg": {
+    "file": "assets/whatsapp-icon-a-3cca7295.svg",
+    "src": "resources/images/whatsapp-icon-a.svg"
+  },
+  "resources/images/whatsapp-icon-logo.svg": {
+    "file": "assets/whatsapp-icon-logo-b46d17ba.svg",
+    "src": "resources/images/whatsapp-icon-logo.svg"
+  },
+  "resources/images/whatsapp-icon-redirect.png": {
+    "file": "assets/whatsapp-icon-redirect-8b58e572.png",
+    "src": "resources/images/whatsapp-icon-redirect.png"
+  },
+  "resources/images/whatsapp.svg": {
+    "file": "assets/whatsapp-1433faeb.svg",
+    "src": "resources/images/whatsapp.svg"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-23a3a142.js",
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/wa-redirect.js": {
+    "file": "assets/wa-redirect-b53437ee.js",
+    "isEntry": true,
+    "src": "resources/js/wa-redirect.js"
+  },
+  "resources/midia/alert.mp3": {
+    "file": "assets/alert-080b9332.mp3",
+    "src": "resources/midia/alert.mp3"
+  }
+}

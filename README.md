@@ -17,7 +17,29 @@ composer require jeffersongoncalves/laravel-whatsapp-widget
 
 ## Usage
 
+Publish config file.
 
+```bash
+php artisan vendor:publish --tag=whatsapp-widget-config
+```
+
+Publish migration file.
+
+```bash
+php artisan vendor:publish --tag=whatsapp-widget-migrations
+```
+
+Add head template.
+
+```php
+@include('whatsapp-widget::whatsapp-widget-head')
+```
+
+Add body template.
+
+```php
+@include('whatsapp-widget::whatsapp-widget-body')
+```
 
 ## Testing
 
