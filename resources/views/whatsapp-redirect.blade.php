@@ -25,7 +25,7 @@
     <div class="number">
         <img class="wa-icon" alt="+{{ $whatsappAgent->phone }}"
              src="{{ Vite::asset('resources/images/whatsapp-icon-redirect.png', "vendor/whatsapp-widget") }}"/>
-        <label>+{{ $whatsappAgent->phone }}</label>
+        <label>{{ $whatsappAgent->phone }}</label>
     </div>
     <div class="lds-spinner">
         <div></div>
