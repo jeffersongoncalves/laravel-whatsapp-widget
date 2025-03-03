@@ -8,9 +8,7 @@
     <meta name="robots" content="noindex, nofollow">
     <script type='text/javascript'>
         /* <![CDATA[ */
-        var ww_whatsapp_chat = "{{ URL::signedRoute('whatsapp-widget.api') }}";
-        var ww_whatsapp_chat_data = "agent={{ $whatsappAgent->id }}&number={{ $whatsappAgent->phone }}&type=click&ref={{ config('whatsapp-widget.url') }}";
-        var ww_whatsapp_chat_redirect = "https://wa.me/{{ $whatsappAgent->phone }}?text={{ urlencode($whatsappAgent->text) }}";
+        var ww_whatsapp_chat_redirect = "https://wa.me/{{ str_replace('+', '', $whatsappAgent->phone) }}?text={{ urlencode($whatsappAgent->text) }}";
         /* ]]> */
     </script>
     @vite('resources/css/wa-redirect.css', "vendor/whatsapp-widget")
