@@ -1,4 +1,5 @@
 <?php
+
 return [
     'redirecting_to' => 'Redirecting to',
     'close' => 'Close',
