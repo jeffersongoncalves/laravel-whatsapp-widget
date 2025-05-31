@@ -14,6 +14,7 @@ class WhatsappWidgetServiceProvider extends PackageServiceProvider
             ->hasConfigFile('whatsapp-widget')
             ->hasAssets()
             ->hasViews()
+            ->hasTranslations()
             ->hasRoute('whatsapp-widget');
     }
 }

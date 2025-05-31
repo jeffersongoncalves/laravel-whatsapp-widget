@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecionando para {{ $whatsappAgent->name }}...</title>
+    <title>{{ __('whatsapp-widget::whatsapp-widget.redirecting_to') }} {{ $whatsappAgent->name }}...</title>
     <meta name="robots" content="noindex, nofollow">
     <script type='text/javascript'>
         /* <![CDATA[ */
