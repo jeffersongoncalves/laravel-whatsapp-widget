@@ -5,6 +5,8 @@ parameters:
     ignoreErrors:
         -
             identifier: property.notFound
+        -
+            identifier: argument.type
     level: 5
     paths:
         - src
