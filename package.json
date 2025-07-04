@@ -8,7 +8,7 @@
     "dependencies": {
         "@rollup/plugin-inject": "^5.0.5",
         "jquery": "^3.7.1",
-        "laravel-vite-plugin": "^0.8.1",
+        "laravel-vite-plugin": "^1.0.0",
         "vite": "^4.5.14",
         "vite-plugin-compression2": "^1.3.3"
     }
