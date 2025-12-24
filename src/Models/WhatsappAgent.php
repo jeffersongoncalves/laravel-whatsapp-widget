@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\URL;
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read string|null $image_url
+ *
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WhatsappAgent newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WhatsappAgent newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WhatsappAgent query()
@@ -27,6 +28,7 @@ use Illuminate\Support\Facades\URL;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WhatsappAgent wherePhone($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WhatsappAgent whereText($value)
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WhatsappAgent whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class WhatsappAgent extends Model
