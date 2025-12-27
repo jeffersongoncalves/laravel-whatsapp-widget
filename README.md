@@ -26,7 +26,7 @@ This Laravel package provides a simple yet customizable WhatsApp widget for your
 ## Requirements
 
 - PHP 8.2 or higher
-- Laravel 11.0 or 12.0 or higher
+- Laravel 11.0 or higher
 
 ## Installation
 
