@@ -26,10 +26,16 @@ This Laravel package provides a simple yet customizable WhatsApp widget for your
 ## Screenshots
 
 ### Widget Position: Right (Default)
-![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png)
+
+| Closed | Open |
+| :---: | :---: |
+| ![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png) | ![Widget Position Right Open](screenshots/whatsapp-widget-bottom-right-open-widget.png) |
 
 ### Widget Position: Left
-![Widget Position Left](screenshots/whatsapp-widget-bottom-left.png)
+
+| Closed | Open |
+| :---: | :---: |
+| ![Widget Position Left](screenshots/whatsapp-widget-bottom-left.png) | ![Widget Position Left Open](screenshots/whatsapp-widget-bottom-left-open-widget.png) |
 
 ### Redirect Page
 ![Redirect Page](screenshots/whatsapp-widget-redirect-page.png)
@@ -164,7 +170,9 @@ Example for left position:
 'position' => 'left',
 ```
 
-![Widget Position Left](screenshots/whatsapp-widget-bottom-left.png)
+| Closed | Open |
+| :---: | :---: |
+| ![Widget Position Left](screenshots/whatsapp-widget-bottom-left.png) | ![Widget Position Left Open](screenshots/whatsapp-widget-bottom-left-open-widget.png) |
 
 Example for right position:
 
@@ -172,7 +180,9 @@ Example for right position:
 'position' => 'right',
 ```
 
-![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png)
+| Closed | Open |
+| :---: | :---: |
+| ![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png) | ![Widget Position Right Open](screenshots/whatsapp-widget-bottom-right-open-widget.png) |
 
 ### Redirect Page
 
