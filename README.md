@@ -23,6 +23,17 @@ This Laravel package provides a simple yet customizable WhatsApp widget for your
 - 🔄 **Pre-defined messages**: Set default text messages for each agent
 - 🖼️ **Custom agent avatars**: Add profile pictures for each agent
 
+## Screenshots
+
+### Widget Position: Right (Default)
+![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png)
+
+### Widget Position: Left
+![Widget Position Left](screenshots/whatsapp-widget-bottom-left.png)
+
+### Redirect Page
+![Redirect Page](screenshots/whatsapp-widget-redirect-page.png)
+
 ## Requirements
 
 - PHP 8.2 or higher
@@ -150,6 +161,28 @@ The widget's appearance can be customized by modifying the CSS files in `public/
 ### Position
 
 By default, the widget appears in the bottom-right corner of the page. You can change this by modifying the `position` value in the `config/whatsapp-widget.php` file.
+
+Example for left position:
+
+```php
+'position' => 'left',
+```
+
+![Widget Position Left](screenshots/whatsapp-widget-bottom-left.png)
+
+Example for right position:
+
+```php
+'position' => 'right',
+```
+
+![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png)
+
+### Redirect Page
+
+When a user clicks on an agent, they are redirected to a temporary page before being sent to WhatsApp. This page can be customized by publishing the package views.
+
+![Redirect Page](screenshots/whatsapp-widget-redirect-page.png)
 
 ## Testing
 
