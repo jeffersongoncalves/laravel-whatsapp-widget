@@ -154,10 +154,6 @@ return [
 
 You can customize the widget's text by editing the translation files in `resources/lang/vendor/whatsapp-widget/`.
 
-### Styling
-
-The widget's appearance can be customized by modifying the CSS files in `public/vendor/whatsapp-widget/`.
-
 ### Position
 
 By default, the widget appears in the bottom-right corner of the page. You can change this by modifying the `position` value in the `config/whatsapp-widget.php` file.
