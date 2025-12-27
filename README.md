@@ -158,6 +158,27 @@ return [
 
 ### Translations
 
+The package currently supports the following languages:
+
+- 🇸🇦 **Arabic** (`ar`)
+- 🇨🇿 **Czech** (`cs`)
+- 🇩🇪 **German** (`de`)
+- 🇺🇸 **English** (`en`)
+- 🇪🇸 **Spanish** (`es`)
+- 🇮🇷 **Persian** (`fa`)
+- 🇫🇷 **French** (`fr`)
+- 🇮🇱 **Hebrew** (`he`)
+- 🇮🇩 **Indonesian** (`id`)
+- 🇮🇹 **Italian** (`it`)
+- 🇯🇵 **Japanese** (`ja`)
+- 🇳🇱 **Dutch** (`nl`)
+- 🇵🇱 **Polish** (`pl`)
+- 🇵🇹 **Portuguese** (`pt`)
+- 🇧🇷 **Portuguese (Brazil)** (`pt_BR`)
+- 🇵🇹 **Portuguese (Portugal)** (`pt_PT`)
+- 🇸🇰 **Slovak** (`sk`)
+- 🇹🇷 **Turkish** (`tr`)
+
 You can customize the widget's text by editing the translation files in `resources/lang/vendor/whatsapp-widget/`.
 
 ### Position
@@ -170,8 +191,8 @@ Example for left position:
 'position' => 'left',
 ```
 
-| Closed | Open |
-| :---: | :---: |
+|                                Closed                                |                                         Open                                          |
+|:--------------------------------------------------------------------:|:-------------------------------------------------------------------------------------:|
 | ![Widget Position Left](screenshots/whatsapp-widget-bottom-left.png) | ![Widget Position Left Open](screenshots/whatsapp-widget-bottom-left-open-widget.png) |
 
 Example for right position:
@@ -180,8 +201,8 @@ Example for right position:
 'position' => 'right',
 ```
 
-| Closed | Open |
-| :---: | :---: |
+|                                 Closed                                 |                                          Open                                           |
+|:----------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
 | ![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png) | ![Widget Position Right Open](screenshots/whatsapp-widget-bottom-right-open-widget.png) |
 
 ### Redirect Page
