@@ -223,7 +223,6 @@ span.agent-label span.status {
 }
 
 .lds-spinner {
-    color: official;
     display: inline-block;
     position: relative;
     width: 64px;
@@ -233,6 +232,15 @@ span.agent-label span.status {
 .lds-spinner div {
     transform-origin: 32px 32px;
     animation: lds-spinner 1.2s linear infinite;
+}
+
+@keyframes lds-spinner {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 .lds-spinner div:after {
@@ -305,40 +313,6 @@ span.agent-label span.status {
 .lds-spinner div:nth-child(12) {
     transform: rotate(330deg);
     animation-delay: 0s;
-}
-
-@keyframes lds-spinner {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.agent-list-item {
-    display: block;
-    background: #ffffff;
-    max-width: 350px;
-    margin: 0 auto;
-    box-shadow: 0 10px 20px #f1f1f1;
-    transition: transform ease-in-out .2s;
-    border-radius: 7px;
-    position: relative;
-}
-
-.agent-list-item:hover {
-    transform: translateY(3px) scale(1);
-}
-
-.agent-list-item + .agent-list-item {
-    margin-top: 20px;
-}
-
-
-p.contact-message {
-    font-size: 12px;
-    opacity: .6;
 }
 
 @media screen and (max-width: 320px) {

@@ -33,7 +33,7 @@
         });
 
         function twResponsive() {
-            const buttons = document.querySelectorAll('.ww-container.ww-std .ww-wa-button');
+            const buttons = document.querySelectorAll('.ww-container.ww-std .ww-whatsapp-button');
             buttons.forEach(function(button) {
                 const width = button.offsetWidth;
                 if (width <= 200) {

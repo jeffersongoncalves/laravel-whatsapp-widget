@@ -26,7 +26,7 @@ This Laravel package provides a simple yet customizable WhatsApp widget for your
 ## Requirements
 
 - PHP 8.2 or higher
-- Laravel 11.0 or higher
+- Laravel 11.0 or 12.0 or higher
 
 ## Installation
 
@@ -62,6 +62,12 @@ Publish translations files:
 
 ```bash
 php artisan vendor:publish --tag=whatsapp-widget-translations
+```
+
+Publish views files:
+
+```bash
+php artisan vendor:publish --tag=whatsapp-widget-views
 ```
 
 ### 2. Run the migrations
@@ -125,6 +131,9 @@ return [
 
     // WhatsApp API key (if needed)
     'key' => env('WHATSAPP_KEY'),
+
+    // Widget position on the screen (left or right)
+    'position' => 'right',
 ];
 ```
 
@@ -140,7 +149,7 @@ The widget's appearance can be customized by modifying the CSS files in `public/
 
 ### Position
 
-By default, the widget appears in the bottom-right corner of the page. You can change this by modifying the CSS classes in the widget's template.
+By default, the widget appears in the bottom-right corner of the page. You can change this by modifying the `position` value in the `config/whatsapp-widget.php` file.
 
 ## Testing
 

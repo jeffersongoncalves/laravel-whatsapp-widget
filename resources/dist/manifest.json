@@ -1,42 +1,44 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-cdf0212e.css",
-    "isEntry": true,
-    "src": "resources/css/app.css"
+    "file": "assets/app-CgC-KuFV.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
   },
   "resources/css/wa-redirect.css": {
-    "file": "assets/wa-redirect-73519648.css",
-    "isEntry": true,
-    "src": "resources/css/wa-redirect.css"
+    "file": "assets/wa-redirect-B85AGpAI.css",
+    "src": "resources/css/wa-redirect.css",
+    "isEntry": true
   },
   "resources/images/whatsapp-icon-a.svg": {
-    "file": "assets/whatsapp-icon-a-3cca7295.svg",
+    "file": "assets/whatsapp-icon-a-1IqH2j5z.svg",
     "src": "resources/images/whatsapp-icon-a.svg"
   },
   "resources/images/whatsapp-icon-logo.svg": {
-    "file": "assets/whatsapp-icon-logo-b46d17ba.svg",
+    "file": "assets/whatsapp-icon-logo-s-EjW9Ft.svg",
     "src": "resources/images/whatsapp-icon-logo.svg"
   },
   "resources/images/whatsapp-icon-redirect.png": {
-    "file": "assets/whatsapp-icon-redirect-8b58e572.png",
+    "file": "assets/whatsapp-icon-redirect-CGpav4v-.png",
     "src": "resources/images/whatsapp-icon-redirect.png"
   },
   "resources/images/whatsapp.svg": {
-    "file": "assets/whatsapp-1433faeb.svg",
+    "file": "assets/whatsapp-Dy_kSKNJ.svg",
     "src": "resources/images/whatsapp.svg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-71f58fa0.js",
-    "isEntry": true,
-    "src": "resources/js/app.js"
+    "file": "assets/app-C5jCOlfi.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
   },
   "resources/js/wa-redirect.js": {
-    "file": "assets/wa-redirect-08fedddd.js",
-    "isEntry": true,
-    "src": "resources/js/wa-redirect.js"
+    "file": "assets/wa-redirect-DUFIwnjZ.js",
+    "name": "wa-redirect",
+    "src": "resources/js/wa-redirect.js",
+    "isEntry": true
   },
   "resources/midia/alert.mp3": {
-    "file": "assets/alert-080b9332.mp3",
+    "file": "assets/alert-BS5zfjEe.mp3",
     "src": "resources/midia/alert.mp3"
   }
 }
