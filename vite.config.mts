@@ -1,16 +1,9 @@
 import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
-import inject from '@rollup/plugin-inject';
 import { compression } from 'vite-plugin-compression2';
 
 export default defineConfig({
     plugins: [
-        inject({
-            include: '**/*.js',
-            exclude: 'node_modules/**',
-            $: 'jquery',
-            jQuery: 'jquery',
-        }),
         laravel({
             buildDirectory: '../resources/dist',
             input: [
@@ -22,6 +15,7 @@ export default defineConfig({
             refresh: true,
         }),
         compression(),
+        // @ts-ignore
         compression({ algorithm: 'brotliCompress', exclude: [/\.(br)$/, /\.(gz)$/]}),
     ],
 });

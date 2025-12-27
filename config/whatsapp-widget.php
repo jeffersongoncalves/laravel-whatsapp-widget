@@ -18,4 +18,7 @@ return [
 
     // WhatsApp API key (if needed)
     'key' => env('WHATSAPP_KEY'),
+
+    // Widget position on the screen (left or right)
+    'position' => 'right',
 ];

@@ -63,27 +63,6 @@
     display: block;
 }
 
-.woocommerce ul.products li.product .ww-wa-button span.agent-avatar-fig {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 30px;
-    flex: 0 0 30px;
-    max-width: 30px;
-}
-
-.woocommerce ul.products li.product .ww-wa-button span.agent-avatar-fig:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background-image: url(../images/whatsapp.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 14px;
-    height: 14px;
-    margin: 0 -2px -2px 0;
-    z-index: 2;
-}
-
 .ww-wa-button span.agent-avatar-fig img {
     width: 100%;
     max-height: 50px;
@@ -101,11 +80,6 @@
     line-height: 100%;
 }
 
-.woocommerce ul.products li.product .ww-wa-button span.agent-detail-fig {
-    padding: 0 10px;
-    max-width: calc(100% - 30px);
-}
-
 @media screen and (max-width: 544px) {
     .ww-wa-button span.agent-detail-fig {
         max-width: calc(100% - 30px);
@@ -121,10 +95,6 @@
     font-size: 16px;
     font-weight: 700;
     line-height: 22px;
-}
-
-.woocommerce ul.products li.product .ww-wa-button span.agent-detail-fig span.agent-message {
-    display: none;
 }
 
 @media screen and (max-width: 480px) {
@@ -148,10 +118,6 @@
     .ww-wa-button span.agent-label {
         position: relative;
     }
-}
-
-.woocommerce ul.products li.product .ww-wa-button span.agent-label {
-    line-height: 15px;
 }
 
 .ww-wa-button span.agent-label span.status {
@@ -197,14 +163,6 @@
     vertical-align: middle;
 }
 
-.woocommerce ul.products li.product .ww-wa-button span.agent-name {
-    white-space: nowrap;
-    overflow: hidden;
-    flex: 1;
-    margin: 0 5px 0 0;
-    text-overflow: ellipsis;
-}
-
 .ww-wa-button.Online span.agent-label span.status {
     opacity: 1;
 }
@@ -220,14 +178,6 @@
     margin-bottom: 15px !important;
 }
 
-.woocommerce .summary .ww-container .contact-message {
-    margin-bottom: 15px !important;
-}
-
-.woocommerce ul.products li.product .ww-container .contact-message {
-    display: none;
-}
-
 .ww-container .chat,
 .ww-container .department,
 .ww-container .agent-number {
@@ -236,10 +186,6 @@
 
 .ww-container.ww-std {
     margin-top: 10px;
-}
-
-.woocommerce ul.products li.product .ww-container {
-    padding-top: 0;
 }
 
 .ww-container {
@@ -470,7 +416,7 @@
     min-height: auto;
 }
 
-.ww-container.ww-floating ul.ww-whatsapp-content li a.ww-whatsapp-button .ww-whatsapp-avatar.wp-post-image {
+.ww-container.ww-floating ul.ww-whatsapp-content li a.ww-whatsapp-button .ww-whatsapp-avatar.ww-image {
     margin: 0 !important;
 }
 
@@ -566,6 +512,16 @@
     visibility: visible;
     margin-bottom: 25px !important;
     transition: opacity ease-in-out 0.3s, visibility ease-in-out 0.3s, margin ease-in-out 0.3s;
+}
+
+.ww-container.ww-floating.bottom-right {
+    bottom: 30px;
+    right: 30px;
+}
+
+.ww-container.ww-floating.bottom-left {
+    bottom: 30px;
+    left: 30px;
 }
 
 .ww-container.ww-floating.bottom-right ul.ww-whatsapp-content {

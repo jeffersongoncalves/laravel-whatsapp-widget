@@ -18,7 +18,7 @@
 <div class="agent-forward">
     <p class="ww-whatsapp-chat-loading-connect"></p>
     <div class="agent-avatar">
-        <img width="150" height="150" class="avatar wp-post-image" alt="{{ $whatsappAgent->name }}"
+        <img width="150" height="150" class="avatar ww-image" alt="{{ $whatsappAgent->name }}"
              src="{{ $whatsappAgent->image_url ?? Vite::asset('resources/images/whatsapp-icon-logo.svg', "vendor/whatsapp-widget") }}"/>
     </div>
     <h1>{{ $whatsappAgent->name }}</h1>

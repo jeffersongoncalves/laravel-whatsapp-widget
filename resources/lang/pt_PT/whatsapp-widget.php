@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'redirecting_to' => 'Redirecionando para',
+    'redirecting_to' => 'A redirecionar para',
     'close' => 'Fechar',
     'close_title' => 'Fechar Suporte',
     'we_are_available' => 'Estamos disponíveis',

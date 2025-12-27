@@ -1,70 +1,74 @@
-import jQuery from 'jquery';
-
-(function($) {
+(function() {
     "use strict";
-    jQuery(document).ready(function($) {
-        $(document).on('click', '.ww-whatsapp-button', function() {
-            var FBAction = $(this).attr('fb-pixel');
-            if ( typeof fbq !== 'undefined' && FBAction ) {
-                if( FBAction != 'noevent' ){
-                    fbq('track', FBAction, {});
+
+    document.addEventListener('DOMContentLoaded', function() {
+
+        document.addEventListener('click', function(event) {
+            // Handle .ww-whatsapp-button clicks
+            const whatsappButton = event.target.closest('.ww-whatsapp-button');
+            if (whatsappButton) {
+                const FBAction = whatsappButton.getAttribute('fb-pixel');
+                if (typeof fbq !== 'undefined' && FBAction) {
+                    if (FBAction !== 'noevent') {
+                        fbq('track', FBAction, {});
+                    }
                 }
             }
-        });
 
-        $(document).click(function(event) {
-            if($(event.target).closest('#contact-trigger').length) {
-                $('.ww-container').toggleClass('open');
+            // Handle #contact-trigger clicks
+            if (event.target.closest('#contact-trigger')) {
+                const containers = document.querySelectorAll('.ww-container');
+                containers.forEach(container => {
+                    container.classList.toggle('open');
+                });
+            }
+
+            // Handle .close-chat clicks
+            if (event.target.closest('.close-chat')) {
+                const containers = document.querySelectorAll('.ww-container');
+                containers.forEach(container => {
+                    container.classList.remove('open');
+                });
             }
         });
 
         function twResponsive() {
-            $('.ww-container.ww-std .ww-wa-button').each(function() {
-                var $this = $(this),
-                    width = $this.outerWidth();
-
+            const buttons = document.querySelectorAll('.ww-container.ww-std .ww-wa-button');
+            buttons.forEach(function(button) {
+                const width = button.offsetWidth;
                 if (width <= 200) {
-                    $this.addClass('smallScreen');
+                    button.classList.add('smallScreen');
                 } else {
-                    $this.removeClass('smallScreen');
+                    button.classList.remove('smallScreen');
                 }
-            })
+            });
         }
 
-        $(window).on('load', function() {
-            twResponsive();
-        });
-        $(window).on('resize', function() {
-            twResponsive();
-        });
+        window.addEventListener('load', twResponsive);
+        window.addEventListener('resize', twResponsive);
 
-        $(document).click(function(x) {
-            if($(x.target).closest('.close-chat').length) {
-                $('.ww-container').removeClass('open');
-            }
-        });
-
-        function ForNumbers(evt){
-            var charCode = (evt.which) ? evt.which : event.keyCode;
+        function ForNumbers(evt) {
+            const charCode = (evt.which) ? evt.which : evt.keyCode;
 
             if (
-                //0~9
-                charCode >= 48 && charCode <= 57 ||
-                //number pad 0~9
-                charCode >= 96 && charCode <= 105 ||
-                //backspace
-                charCode == 8 ||
-                //tab
-                charCode == 9 ||
-                //enter
-                charCode == 13 ||
-                //left, right, delete..
-                charCode >= 35 && charCode <= 46
-            )
-            {
-                //make sure the new value below 20
-                if(parseInt(this.value+String.fromCharCode(charCode), 10) <= 100)
+                // 0~9
+                (charCode >= 48 && charCode <= 57) ||
+                // number pad 0~9
+                (charCode >= 96 && charCode <= 105) ||
+                // backspace
+                charCode === 8 ||
+                // tab
+                charCode === 9 ||
+                // enter
+                charCode === 13 ||
+                // left, right, delete..
+                (charCode >= 35 && charCode <= 46)
+            ) {
+                // make sure the new value below 100
+                const newValue = parseInt(this.value + String.fromCharCode(charCode), 10);
+                if (newValue <= 100) {
                     return true;
+                }
             }
 
             evt.preventDefault();
@@ -73,11 +77,11 @@ import jQuery from 'jquery';
             return false;
         }
 
-        $('input.input-views').each(function() {
-            var $this = $(this);
-            $this.on('keypress', ForNumbers, false);
-        })
+        const viewInputs = document.querySelectorAll('input.input-views');
+        viewInputs.forEach(function(input) {
+            input.addEventListener('keypress', ForNumbers);
+        });
     });
-})(jQuery);
+})();
 
 import.meta.glob(['../images/**', '../midia/**']);
