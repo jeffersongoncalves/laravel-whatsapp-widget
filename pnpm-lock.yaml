@@ -15,8 +15,8 @@ importers:
         specifier: ^8.0.0
         version: 8.0.0(esbuild@0.27.2)
       vite-plugin-compression2:
-        specifier: ^2.5.1
-        version: 2.5.1(rollup@4.55.1)
+        specifier: ^2.5.2
+        version: 2.5.2(rollup@4.55.1)
 
 packages:
 
@@ -574,8 +574,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  vite-plugin-compression2@2.5.1:
-    resolution: {integrity: sha512-2YpLZWs1ZRo9XwtSFA6/NVuBgOR+kvFk8M0HNDsP7Wu7OfJDOKT6fHB8kzuvw6jhgC9KYgDOttfaG2qC0wE9AQ==}
+  vite-plugin-compression2@2.5.2:
+    resolution: {integrity: sha512-a1eAY2Ux5JrflaWStWUa7yoMnjhw3tx7y6vQIp20QZ9K57wcKxYT+DUJiAG4VSEvmFMjeo9a5R2phdBriOJ/1A==}
 
   vite-plugin-full-reload@1.2.0:
     resolution: {integrity: sha512-kz18NW79x0IHbxRSHm0jttP4zoO9P9gXh+n6UTwlNKnviTTEpOlum6oS9SmecrTtSr+muHEn5TUuC75UovQzcA==}
@@ -1044,7 +1044,7 @@ snapshots:
   tslib@2.8.1:
     optional: true
 
-  vite-plugin-compression2@2.5.1(rollup@4.55.1):
+  vite-plugin-compression2@2.5.2(rollup@4.55.1):
     dependencies:
       '@rollup/pluginutils': 5.3.0(rollup@4.55.1)
       tar-mini: 0.2.0
