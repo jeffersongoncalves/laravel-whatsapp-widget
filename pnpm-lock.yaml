@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       laravel-vite-plugin:
-        specifier: ^3.0.1
-        version: 3.0.1(vite@8.0.10(esbuild@0.27.2))
+        specifier: ^3.1.0
+        version: 3.1.0(vite@8.0.10(esbuild@0.27.2))
       vite:
         specifier: ^8.0.10
         version: 8.0.10(esbuild@0.27.2)
@@ -452,12 +452,16 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
 
-  laravel-vite-plugin@3.0.1:
-    resolution: {integrity: sha512-Bx8sVcLIaZT1d0eisABcmjQ1GZdJpaXcV66A8RhXGp9JgR3iL8jDnvakVDXuH87Tn5S9KNx3VOhmJZW1CSexOg==}
+  laravel-vite-plugin@3.1.0:
+    resolution: {integrity: sha512-Fzocl+X4eQ9jOi0RwdphYRGkUbPJ3ky1pTAST5Ot18cS2gw6d2vldK2eCrlKDVjtibCjCx5qptYDlA0373n7qg==}
     engines: {node: ^20.19.0 || >=22.12.0}
     hasBin: true
     peerDependencies:
+      fontaine: ^0.5.0
       vite: ^8.0.0
+    peerDependenciesMeta:
+      fontaine:
+        optional: true
 
   lightningcss-android-arm64@1.32.0:
     resolution: {integrity: sha512-YK7/ClTt4kAK0vo6w3X+Pnm0D2cf2vPHbhOXdoNti1Ga0al1P4TBZhwjATvjNwLEBCnKvjJc2jQgHXH0NEwlAg==}
@@ -565,10 +569,6 @@ packages:
 
   tar-mini@0.2.0:
     resolution: {integrity: sha512-+qfUHz700DWnRutdUsxRRVZ38G1Qr27OetwaMYTdg8hcPxf46U0S1Zf76dQMWRBmusOt2ZCK5kbIaiLkoGO7WQ==}
-
-  tinyglobby@0.2.15:
-    resolution: {integrity: sha512-j2Zq4NyQYG5XMST4cbs02Ak8iJUdxRM0XI5QyxXuZOzKOINmWurp3smXu3y5wDcJrptwpSjgXHzIQxR0omXljQ==}
-    engines: {node: '>=12.0.0'}
 
   tinyglobby@0.2.16:
     resolution: {integrity: sha512-pn99VhoACYR8nFHhxqix+uvsbXineAasWm5ojXoN8xEwK5Kd3/TrhNn1wByuD52UxWRLy8pu+kRMniEi6Eq9Zg==}
@@ -913,10 +913,10 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
-  laravel-vite-plugin@3.0.1(vite@8.0.10(esbuild@0.27.2)):
+  laravel-vite-plugin@3.1.0(vite@8.0.10(esbuild@0.27.2)):
     dependencies:
       picocolors: 1.1.1
-      tinyglobby: 0.2.15
+      tinyglobby: 0.2.16
       vite: 8.0.10(esbuild@0.27.2)
       vite-plugin-full-reload: 1.2.0
 
@@ -1039,11 +1039,6 @@ snapshots:
   source-map-js@1.2.1: {}
 
   tar-mini@0.2.0: {}
-
-  tinyglobby@0.2.15:
-    dependencies:
-      fdir: 6.5.0(picomatch@4.0.4)
-      picomatch: 4.0.4
 
   tinyglobby@0.2.16:
     dependencies:
