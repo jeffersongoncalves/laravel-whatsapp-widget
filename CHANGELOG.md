@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.2 - 2026-05-21
+
+### What's Changed
+
+* chore(deps): bump vite-plugin-compression2 from 2.4.0 to 2.5.0 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/26
+* chore(deps): bump vite-plugin-compression2 from 2.5.0 to 2.5.1 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/27
+* chore(deps): bump vite from 7.3.1 to 8.0.0 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/28
+* chore(deps): bump vite-plugin-compression2 from 2.5.1 to 2.5.2 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/30
+* chore(deps): bump ramsey/composer-install from 3 to 4 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/29
+* chore(deps): bump laravel-vite-plugin from 2.1.0 to 3.0.0 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/31
+* chore(deps): bump vite from 8.0.0 to 8.0.1 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/32
+* chore(deps): bump the actions-deps group with 2 updates by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/33
+* bump vite from 8.0.2 to 8.0.3 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/34
+* chore(deps): bump dependabot/fetch-metadata from 2.5.0 to 3.0.0 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/35
+* chore(deps): bump laravel-vite-plugin from 3.0.0 to 3.0.1 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/36
+* chore(deps): bump vite from 8.0.3 to 8.0.5 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/37
+* chore(deps): bump vite from 8.0.5 to 8.0.7 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/38
+* chore(deps): bump vite from 8.0.7 to 8.0.8 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/39
+* chore(deps): bump vite from 8.0.8 to 8.0.9 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/40
+* chore(deps): bump vite from 8.0.9 to 8.0.10 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/41
+* chore(deps): bump laravel-vite-plugin from 3.0.1 to 3.1.0 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/42
+* chore(deps): bump vite from 8.0.10 to 8.0.11 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/43
+* chore(deps): bump vite from 8.0.11 to 8.0.12 in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/44
+* chore(deps): bump vite from 8.0.12 to 8.0.13 (via audit fix) in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/45
+* chore(deps): bump vite from 8.0.13 to 8.0.14 (via audit fix) in the actions-deps group by @dependabot[bot] in https://github.com/jeffersongoncalves/laravel-whatsapp-widget/pull/46
+
+**Full Changelog**: https://github.com/jeffersongoncalves/laravel-whatsapp-widget/compare/v1.4.1...v1.4.2
+
 ## v1.4.1 - 2026-02-24
 
 ### What's Changed
