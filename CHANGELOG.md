@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.4.4 - 2026-05-23
+
+**Full Changelog**: https://github.com/jeffersongoncalves/laravel-whatsapp-widget/compare/v1.4.3...v1.4.4
+
 ## v1.4.3 - 2026-05-23
 
 **Full Changelog**: https://github.com/jeffersongoncalves/laravel-whatsapp-widget/compare/v1.4.2...v1.4.3
