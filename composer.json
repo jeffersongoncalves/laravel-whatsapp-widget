@@ -33,7 +33,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "JeffersonGoncalves\\WhatsappWidget\\Tests\\": "tests"
+            "JeffersonGoncalves\\WhatsappWidget\\Tests\\": "tests",
+            "JeffersonGoncalves\\WhatsappWidget\\Database\\Factories\\": "database/factories"
         }
     },
     "scripts": {

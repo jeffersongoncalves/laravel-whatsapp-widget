@@ -2,6 +2,7 @@
 
 namespace JeffersonGoncalves\WhatsappWidget\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\URL;
@@ -33,6 +34,8 @@ use Illuminate\Support\Facades\URL;
  */
 class WhatsappAgent extends Model
 {
+    use HasFactory;
+
     protected $fillable = [
         'active',
         'name',
