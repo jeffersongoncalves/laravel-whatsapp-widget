@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file.
 
+## v1.5.0 - 2026-06-23
+
+### What's Changed
+
+Add appearance customization for the widget, modal and redirect screen.
+
+#### Added
+
+- **Themeable colors** for the floating button, modal and online status via the new `colors` config array — applied through CSS custom properties, so recoloring needs **no asset rebuild**.
+- **Modal customization**: independent control of popup background, text and muted colors.
+- **Redirect screen styling** via the new `redirect` config array (background, text, name, accent, spinner).
+- **Custom icons** via the new `icons` config array (trigger, fallback avatar, redirect icon).
+
+#### Notes
+
+- Widget side (left/right) remains configurable via the existing `position` option.
+- Fully backward compatible — defaults match the previous appearance.
+
+**Full Changelog**: https://github.com/jeffersongoncalves/laravel-whatsapp-widget/compare/v1.4.4...v1.5.0
+
 ## v1.4.4 - 2026-05-23
 
 **Full Changelog**: https://github.com/jeffersongoncalves/laravel-whatsapp-widget/compare/v1.4.3...v1.4.4
