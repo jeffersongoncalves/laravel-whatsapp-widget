@@ -10,7 +10,8 @@ class WhatsappsController
 {
     public function __invoke(Request $request): JsonResponse
     {
-        abort_if($request->token !== config('whatsapp-widget.key'), 403);
+        $key = config('whatsapp-widget.key');
+        abort_if(blank($key) || ! is_string($request->token) || ! hash_equals((string) $key, (string) $request->token), 403);
         $whatsappAgents = WhatsappAgent::query()->where('active', true)->get();
         $ref = config('whatsapp-widget.url');
         $data = [];

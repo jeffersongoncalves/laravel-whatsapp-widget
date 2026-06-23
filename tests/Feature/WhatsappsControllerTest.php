@@ -20,6 +20,15 @@ it('returns 403 when token is invalid', function () {
     $this->getJson('/api/whatsapps?token=wrong')->assertForbidden();
 });
 
+it('returns 403 when key is not configured even if token matches null', function () {
+    config()->set('whatsapp-widget.key', null);
+
+    WhatsappAgent::factory()->create();
+
+    $this->getJson('/api/whatsapps')->assertForbidden();
+    $this->getJson('/api/whatsapps?token=')->assertForbidden();
+});
+
 it('lists only active agents when token is valid', function () {
     WhatsappAgent::factory()->create(['name' => 'Active Agent']);
     WhatsappAgent::factory()->inactive()->create(['name' => 'Hidden Agent']);

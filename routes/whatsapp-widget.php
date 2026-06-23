@@ -6,4 +6,5 @@ use JeffersonGoncalves\WhatsappWidget\Http\Controllers\WhatsappsController;
 
 Route::get('/api/whatsapps', WhatsappsController::class);
 Route::get('/whatsapp-widget/redirect/{whatsapp_agent}', RedirectController::class)
+    ->middleware('signed')
     ->name('whatsapp-widget.redirect');
