@@ -5,7 +5,7 @@
         class="ww-container ww-floating {{ config('whatsapp-widget.position', 'right') === 'left' ? 'bottom-left' : 'bottom-right' }}">
         <span id="contact-trigger" class="ww-whatsapp-icon-only">
             <img class="icon" alt="{{ __('whatsapp-widget::whatsapp-widget.icon_alt') }}"
-                 src="{{ Vite::asset('resources/images/whatsapp-icon-a.svg', "vendor/whatsapp-widget") }}">
+                 src="{{ config('whatsapp-widget.icons.trigger') ?? Vite::asset('resources/images/whatsapp-icon-a.svg', "vendor/whatsapp-widget") }}">
         </span>
         <div id="notification-badge">{{ $whatsappAgents->count() }}</div>
         <ul class="ww-whatsapp-content">
@@ -14,7 +14,7 @@
                     {{ __('whatsapp-widget::whatsapp-widget.close') }}
                 </a>
                 <img class="icon" alt="{{ __('whatsapp-widget::whatsapp-widget.icon_alt') }}"
-                     src="{{ Vite::asset('resources/images/whatsapp-icon-a.svg', "vendor/whatsapp-widget") }}">
+                     src="{{ config('whatsapp-widget.icons.trigger') ?? Vite::asset('resources/images/whatsapp-icon-a.svg', "vendor/whatsapp-widget") }}">
                 <h5>
                     {{ config('whatsapp-widget.name') }}
                     <span>{{ __('whatsapp-widget::whatsapp-widget.we_are_available') }}</span>
@@ -27,7 +27,7 @@
                        href="{{ URL::signedRoute('whatsapp-widget.redirect', ['whatsapp_agent' => $whatsappAgent->id, 'agent' => $whatsappAgent->id, 'number' => $whatsappAgent->phone, 'ref' => config('whatsapp-widget.url')]) }}">
                         <img width="60" height="60" class="ww-whatsapp-avatar ww-image"
                              alt="{{ $whatsappAgent->name }}"
-                             src="{{ $whatsappAgent->image_url ?? Vite::asset('resources/images/whatsapp-icon-logo.svg', "vendor/whatsapp-widget") }}"/>
+                             src="{{ $whatsappAgent->image_url ?? config('whatsapp-widget.icons.avatar') ?? Vite::asset('resources/images/whatsapp-icon-logo.svg', "vendor/whatsapp-widget") }}"/>
                         <span class="ww-whatsapp-text">
                             <span class="ww-whatsapp-label">
                                 <span class="status">{{ __('whatsapp-widget::whatsapp-widget.online') }}</span>

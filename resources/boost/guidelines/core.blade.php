@@ -62,6 +62,46 @@ GET /whatsapp-widget/redirect/{whatsapp_agent}  (signed URL)
 'name'             => env('APP_NAME', 'Laravel App'),
 'key'              => env('WHATSAPP_KEY'),   // API auth token
 'position'         => 'right',               // Widget position: 'left' or 'right'
+
+// Floating button + modal colors
+'colors' => [
+    'primary'      => '#03cc0b', // button, modal header, accents
+    'primary_text' => '#ffffff', // text/icon on primary
+    'badge'        => '#ff0000', // notification badge
+    'modal_bg'     => '#ffffff', // modal background
+    'modal_text'   => '#000000', // modal main text
+    'modal_muted'  => '#bababa', // modal secondary text
+    'online'       => '#03cc0b', // online status dot/label
+],
+
+// Redirect (loading) screen colors
+'redirect' => [
+    'background' => '#f1f1f1',
+    'text'       => '#7e7e7e',
+    'name'       => '#333333',
+    'accent'     => '#03cc0b',
+    'spinner'    => '#92d1c3',
+],
+
+// Custom icons (null = bundled defaults). URL or path.
+'icons' => [
+    'trigger'  => null, // floating button + modal header
+    'avatar'   => null, // fallback agent avatar
+    'redirect' => null, // redirect screen icon
+],
+</code-snippet>
+@endverbatim
+
+### Theming
+
+@verbatim
+<code-snippet name="theming" lang="text">
+// Colors are applied via CSS custom properties injected by the
+// `whatsapp-widget::whatsapp-widget-styles` partial (auto-included by
+// the head + redirect views). The bundled CSS reads them with
+// var(--ww-*, fallback), so changing config requires NO asset rebuild.
+//
+// If you edit resources/css/*.css, rebuild assets with: npm run build
 </code-snippet>
 @endverbatim
 
@@ -91,3 +131,4 @@ Schema::create('whatsapp_agents', function (Blueprint $table) {
 - Redirect uses `URL::signedRoute()` for security (prevents URL tampering)
 - Audio plays after 3-second delay; cookie controls daily playback limit
 - Translations use `whatsapp-widget::whatsapp-widget.*` key prefix
+- Colors are themeable via config → CSS variables (no rebuild needed); icons overridable via `icons.*` config

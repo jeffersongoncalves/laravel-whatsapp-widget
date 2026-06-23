@@ -11,6 +11,7 @@
         var ww_whatsapp_chat_redirect = "https://wa.me/{{ str_replace('+', '', $whatsappAgent->phone) }}?text={{ urlencode($whatsappAgent->text ?? '') }}";
         /* ]]> */
     </script>
+    @include('whatsapp-widget::whatsapp-widget-styles')
     @vite('resources/css/wa-redirect.css', "vendor/whatsapp-widget")
     @vite('resources/js/wa-redirect.js', "vendor/whatsapp-widget")
 </head>
@@ -19,12 +20,12 @@
     <p class="ww-whatsapp-chat-loading-connect"></p>
     <div class="agent-avatar">
         <img width="150" height="150" class="avatar ww-image" alt="{{ $whatsappAgent->name }}"
-             src="{{ $whatsappAgent->image_url ?? Vite::asset('resources/images/whatsapp-icon-logo.svg', "vendor/whatsapp-widget") }}"/>
+             src="{{ $whatsappAgent->image_url ?? config('whatsapp-widget.icons.avatar') ?? Vite::asset('resources/images/whatsapp-icon-logo.svg', "vendor/whatsapp-widget") }}"/>
     </div>
     <h1>{{ $whatsappAgent->name }}</h1>
     <div class="number">
         <img class="wa-icon" alt="+{{ $whatsappAgent->phone }}"
-             src="{{ Vite::asset('resources/images/whatsapp-icon-redirect.png', "vendor/whatsapp-widget") }}"/>
+             src="{{ config('whatsapp-widget.icons.redirect') ?? Vite::asset('resources/images/whatsapp-icon-redirect.png', "vendor/whatsapp-widget") }}"/>
         <label>{{ $whatsappAgent->phone }}</label>
     </div>
     <div class="lds-spinner">

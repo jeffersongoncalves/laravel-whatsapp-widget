@@ -1,11 +1,22 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-CgZ3I7dV.css",
+    "file": "assets/app-NsVIsK5j.css",
+    "name": "app",
+    "names": [
+      "app.css"
+    ],
     "src": "resources/css/app.css",
-    "isEntry": true
+    "isEntry": true,
+    "assets": [
+      "assets/whatsapp-icon-a-1IqH2j5z.svg"
+    ]
   },
   "resources/css/wa-redirect.css": {
-    "file": "assets/wa-redirect-Dz9sROyD.css",
+    "file": "assets/wa-redirect-Bv_dTQNI.css",
+    "name": "wa-redirect",
+    "names": [
+      "wa-redirect.css"
+    ],
     "src": "resources/css/wa-redirect.css",
     "isEntry": true
   },
@@ -26,13 +37,13 @@
     "src": "resources/images/whatsapp.svg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-C5jCOlfi.js",
+    "file": "assets/app-DJ7mq2tt.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true
   },
   "resources/js/wa-redirect.js": {
-    "file": "assets/wa-redirect-DUFIwnjZ.js",
+    "file": "assets/wa-redirect-FRwKAiE-.js",
     "name": "wa-redirect",
     "src": "resources/js/wa-redirect.js",
     "isEntry": true

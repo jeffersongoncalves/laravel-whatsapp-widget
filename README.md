@@ -16,7 +16,11 @@ This Laravel package provides a simple yet customizable WhatsApp widget for your
 ## Features
 
 - 🚀 **Multi-agent support**: Add multiple WhatsApp agents with different phone numbers and names
-- 🎨 **Customizable appearance**: Change the widget's position, colors, and text
+- ↔️ **Side selection**: Place the floating widget on the left or right of the screen
+- 🎨 **Themeable colors**: Customize the button, modal and online status colors via config (no asset rebuild required)
+- 🪟 **Modal customization**: Control the popup background, text and muted colors independently
+- 🔀 **Redirect screen styling**: Customize the loading/redirect page background, text, accent and spinner colors
+- 🖼️ **Custom icons**: Replace the trigger, fallback avatar and redirect icons with your own
 - 🔊 **Audio notifications**: Optional sound alert when the widget loads (configurable)
 - 📱 **Mobile-friendly**: Responsive design that works on all devices
 - 🌐 **Localization support**: Easily translate the widget to any language
@@ -151,6 +155,33 @@ return [
 
     // Widget position on the screen (left or right)
     'position' => 'right',
+
+    // Colors for the floating button and the modal that opens
+    'colors' => [
+        'primary' => '#03cc0b',      // Button, modal header and base accents
+        'primary_text' => '#ffffff', // Text/icon on top of the primary color
+        'badge' => '#ff0000',        // Notification badge background
+        'modal_bg' => '#ffffff',     // Modal (popup) background
+        'modal_text' => '#000000',   // Agent name / main text inside the modal
+        'modal_muted' => '#bababa',  // Secondary / muted text inside the modal
+        'online' => '#03cc0b',       // Online status dot and label
+    ],
+
+    // Colors for the redirect (loading) screen
+    'redirect' => [
+        'background' => '#f1f1f1',
+        'text' => '#7e7e7e',
+        'name' => '#333333',
+        'accent' => '#03cc0b',
+        'spinner' => '#92d1c3',
+    ],
+
+    // Custom icons (null = bundled defaults). Provide a public URL or path.
+    'icons' => [
+        'trigger' => null,  // Floating button + modal header icon
+        'avatar' => null,   // Fallback agent avatar (when an agent has no image)
+        'redirect' => null, // Small icon shown on the redirect screen
+    ],
 ];
 ```
 
@@ -205,9 +236,49 @@ Example for right position:
 |:----------------------------------------------------------------------:|:---------------------------------------------------------------------------------------:|
 | ![Widget Position Right](screenshots/whatsapp-widget-bottom-right.png) | ![Widget Position Right Open](screenshots/whatsapp-widget-bottom-right-open-widget.png) |
 
+### Colors
+
+The widget and the modal that opens are fully themeable through the `colors` array in `config/whatsapp-widget.php`. Colors are applied through CSS custom properties, so **changing them does not require rebuilding the assets**.
+
+```php
+'colors' => [
+    'primary' => '#25D366',      // Button, modal header and accents
+    'primary_text' => '#ffffff', // Text/icon on top of the primary color
+    'badge' => '#ff0000',        // Notification badge background
+    'modal_bg' => '#ffffff',     // Modal background
+    'modal_text' => '#111111',   // Agent name / main text
+    'modal_muted' => '#9aa0a6',  // Secondary text
+    'online' => '#25D366',       // Online status dot and label
+],
+```
+
+The redirect (loading) screen has its own palette:
+
+```php
+'redirect' => [
+    'background' => '#f1f1f1',
+    'text' => '#7e7e7e',
+    'name' => '#333333',
+    'accent' => '#25D366',
+    'spinner' => '#92d1c3',
+],
+```
+
+### Icons
+
+You can replace the default icons with your own by pointing the `icons` array to a public URL or path. Leave a value as `null` to keep the bundled default.
+
+```php
+'icons' => [
+    'trigger' => asset('images/my-whatsapp.svg'), // Floating button + modal header
+    'avatar' => asset('images/my-avatar.png'),    // Fallback agent avatar
+    'redirect' => asset('images/my-icon.png'),    // Redirect screen icon
+],
+```
+
 ### Redirect Page
 
-When a user clicks on an agent, they are redirected to a temporary page before being sent to WhatsApp. This page can be customized by publishing the package views.
+When a user clicks on an agent, they are redirected to a temporary page before being sent to WhatsApp. Its colors and icon are configurable via the `redirect` and `icons` arrays above, and the full page can be further customized by publishing the package views.
 
 ![Redirect Page](screenshots/whatsapp-widget-redirect-page.png)
 

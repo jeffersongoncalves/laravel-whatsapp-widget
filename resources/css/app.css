@@ -780,20 +780,21 @@
     }
 }
 
+/* ---- Themeable colors (driven by config via CSS variables) ---- */
 .ww-container.ww-std a {
-    background-color: #03cc0b
+    background-color: var(--ww-primary, #03cc0b)
 }
 
 .ww-wa-button {
-    background: #03cc0b
+    background: var(--ww-primary, #03cc0b)
 }
 
 .ww-wa-button span.agent-detail-fig {
-    color: #fff
+    color: var(--ww-primary-text, #fff)
 }
 
 .ww-wa-button span.agent-name {
-    color: #fff
+    color: var(--ww-primary-text, #fff)
 }
 
 .ww-wa-button.Online span.agent-label span.status {
@@ -804,32 +805,69 @@
     background-color: #ffef9f
 }
 
+.ww-container #notification-badge {
+    background-color: var(--ww-badge, #ff0000)
+}
+
+.ww-container.ww-floating ul.ww-whatsapp-content {
+    background: var(--ww-modal-bg, #ffffff)
+}
+
+.ww-container.ww-floating ul.ww-whatsapp-content:after {
+    border-top-color: var(--ww-modal-bg, #ffffff)
+}
+
+.ww-container.ww-floating ul.ww-whatsapp-content li {
+    background: var(--ww-modal-bg, #ffffff)
+}
+
+.ww-container.ww-floating ul.ww-whatsapp-content li.ww-content-footer {
+    background: var(--ww-modal-bg, #ffffff)
+}
+
 .ww-container.ww-floating ul.ww-whatsapp-content li.available a.ww-whatsapp-button {
-    background-color: #ffffff !important;
-    color: #000000
+    background-color: var(--ww-modal-bg, #ffffff) !important;
+    color: var(--ww-modal-text, #000000)
 }
 
 .ww-container.ww-floating ul.ww-whatsapp-content li a.ww-whatsapp-button span.ww-whatsapp-text {
-    color: #000000
+    color: var(--ww-modal-text, #000000)
+}
+
+.ww-container.ww-floating ul.ww-whatsapp-content li a.ww-whatsapp-button span.ww-whatsapp-text span.ww-whatsapp-label {
+    color: var(--ww-modal-muted, #bababa) !important
 }
 
 .ww-container.ww-floating ul.ww-whatsapp-content li.available a.ww-whatsapp-button span.ww-whatsapp-text span.ww-whatsapp-label span.status {
-    color: #03cc0b
+    color: var(--ww-online, #03cc0b)
+}
+
+.ww-container.ww-floating ul.ww-whatsapp-content li.available a.ww-whatsapp-button span.ww-whatsapp-text:after {
+    background: var(--ww-online, #03cc0b)
+}
+
+.ww-container.ww-floating ul.ww-whatsapp-content li.available a.ww-whatsapp-button .ww-whatsapp-avatar {
+    border-color: var(--ww-online, #03cc0b)
 }
 
 .ww-container.ww-floating ul.ww-whatsapp-content li.unavailable a.ww-whatsapp-button span.ww-whatsapp-text span.ww-whatsapp-label span.status {
-    color: #bababa
+    color: var(--ww-modal-muted, #bababa)
+}
+
+.ww-container:not(.ww-whatsapp-chat-std) .ww-whatsapp-button:after {
+    background-color: var(--ww-primary, #0ed459)
 }
 
 .ww-container.ww-floating ul.ww-whatsapp-content li.ww-content-header {
-    background: #03cc0b
+    background: var(--ww-primary, #03cc0b)
 }
 
-.ww-container.ww-floating ul.ww-whatsapp-content li.ww-content-header h5 {
-    color: #ffffff
+.ww-container.ww-floating ul.ww-whatsapp-content li.ww-content-header h5,
+.ww-container.ww-floating ul.ww-whatsapp-content li.ww-content-header h5 span {
+    color: var(--ww-primary-text, #ffffff)
 }
 
 .ww-container span#contact-trigger {
-    background: #03cc0b;
-    color: #ffffff;
+    background: var(--ww-primary, #03cc0b);
+    color: var(--ww-primary-text, #ffffff);
 }

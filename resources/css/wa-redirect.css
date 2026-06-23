@@ -370,3 +370,28 @@ p.contact-message {
         line-height: 18px;
     }
 }
+
+/* ---- Themeable colors (driven by config via CSS variables) ---- */
+body {
+    background-color: var(--ww-redirect-bg, #f1f1f1);
+    color: var(--ww-redirect-text, #7e7e7e);
+}
+
+.ww-whatsapp-chat-loading-connect,
+.number label {
+    color: var(--ww-redirect-text, #7e7e7e);
+}
+
+.agent-forward h1 {
+    color: var(--ww-redirect-name, #333333);
+}
+
+.lds-spinner div:after {
+    background: var(--ww-redirect-spinner, #92D1C3);
+}
+
+.agent-avatar span.wa-icon,
+span.wapb-span,
+a.ww-wa-button span.chat {
+    background: var(--ww-redirect-accent, #03cc0b);
+}
