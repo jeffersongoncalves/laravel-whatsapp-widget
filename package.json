@@ -6,7 +6,7 @@
         "build": "vite build"
     },
     "dependencies": {
-        "laravel-vite-plugin": "^3.1.0",
+        "laravel-vite-plugin": "^3.1.3",
         "vite": "^8.1.4",
         "vite-plugin-compression2": "^2.5.3"
     }
