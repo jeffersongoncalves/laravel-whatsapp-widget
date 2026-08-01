@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.0.0 - 2026-08-01
+
+### Security
+
+Drop Laravel 11 support (EOL, unpatched). Require `laravel/framework: ^12.61.1|^13.12.0` to fix:
+
+- GHSA-crmm-hgp2-wgrp — Temporary Signed URL Path Confusion
+- GHSA-5vg9-5847-vvmq — CRLF injection in default email validation rule
+
+**Breaking change**: Laravel 11 is no longer supported.
+
 ## v1.5.0 - 2026-06-23
 
 ### What's Changed
