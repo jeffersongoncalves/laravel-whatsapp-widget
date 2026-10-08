@@ -7,4 +7,5 @@ return [
     'we_are_available' => 'Müsaitiz',
     'online' => 'Çevrimiçi',
     'icon_alt' => 'WhatsApp simgesi',
+    'offline' => 'Çevrimdışı',
 ];

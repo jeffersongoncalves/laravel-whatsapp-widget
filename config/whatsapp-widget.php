@@ -19,6 +19,11 @@ return [
     // WhatsApp API key (if needed)
     'key' => env('WHATSAPP_KEY'),
 
+    // Opening hours (requires jeffersongoncalves/laravel-open-hours). What the widget does while you're closed:
+    // null = ignore opening hours, 'hide' = don't render the widget,
+    // 'closed' = keep it, show "Closed · opens Monday at 09:00" and the agents as offline.
+    'when_closed' => null,
+
     // Widget position on the screen (left or right)
     'position' => 'right',
 

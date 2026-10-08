@@ -7,4 +7,5 @@ return [
     'we_are_available' => 'אנחנו זמינים',
     'online' => 'מחובר',
     'icon_alt' => 'סמל וואטסאפ',
+    'offline' => 'לא מחובר',
 ];

@@ -1,6 +1,7 @@
 @php use Illuminate\Support\Facades\URL;use JeffersonGoncalves\WhatsappWidget\Models\WhatsappAgent; @endphp
 @php $whatsappAgents = WhatsappAgent::query()->where('active', true)->get(); @endphp
-@if($whatsappAgents->count())
+@php $closed = \JeffersonGoncalves\WhatsappWidget\Support\OpenHoursGate::closedMode(); @endphp
+@if($whatsappAgents->count() && $closed !== 'hide')
     <div
         class="ww-container ww-floating {{ config('whatsapp-widget.position', 'right') === 'left' ? 'bottom-left' : 'bottom-right' }}">
         <span id="contact-trigger" class="ww-whatsapp-icon-only">
@@ -17,11 +18,11 @@
                      src="{{ config('whatsapp-widget.icons.trigger') ?? Vite::asset('resources/images/whatsapp-icon-a.svg', "vendor/whatsapp-widget") }}">
                 <h5>
                     {{ config('whatsapp-widget.name') }}
-                    <span>{{ __('whatsapp-widget::whatsapp-widget.we_are_available') }}</span>
+                    <span>{{ $closed ? \JeffersonGoncalves\WhatsappWidget\Support\OpenHoursGate::statusText() : __('whatsapp-widget::whatsapp-widget.we_are_available') }}</span>
                 </h5>
             </li>
             @foreach($whatsappAgents as $whatsappAgent)
-                <li class="available">
+                <li class="{{ $closed ? 'unavailable' : 'available' }}">
                     <a class="ww-whatsapp-button" target="_blank" data-agent="{{ $whatsappAgent->id }}"
                        data-number="{{ $whatsappAgent->phone }}" rel="nofollow"
                        href="{{ URL::signedRoute('whatsapp-widget.redirect', ['whatsapp_agent' => $whatsappAgent->id, 'agent' => $whatsappAgent->id, 'number' => $whatsappAgent->phone, 'ref' => config('whatsapp-widget.url')]) }}">
@@ -30,7 +31,7 @@
                              src="{{ $whatsappAgent->image_url ?? config('whatsapp-widget.icons.avatar') ?? Vite::asset('resources/images/whatsapp-icon-logo.svg', "vendor/whatsapp-widget") }}"/>
                         <span class="ww-whatsapp-text">
                             <span class="ww-whatsapp-label">
-                                <span class="status">{{ __('whatsapp-widget::whatsapp-widget.online') }}</span>
+                                <span class="status">{{ $closed ? __('whatsapp-widget::whatsapp-widget.offline') : __('whatsapp-widget::whatsapp-widget.online') }}</span>
                             </span>
                             {{ $whatsappAgent->name }}
                         </span>
@@ -41,7 +42,7 @@
                 <p></p>
             </li>
         </ul>
-        @if(config('whatsapp-widget.audio'))
+        @if(config('whatsapp-widget.audio') && ! $closed)
             <audio id="ww-whatsapp-audio" preload="auto">
                 <source src="{{ Vite::asset('resources/midia/alert.mp3', "vendor/whatsapp-widget") }}"
                         type="audio/mpeg"/>

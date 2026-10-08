@@ -21,10 +21,14 @@
         "spatie/laravel-package-tools": "^1.14.0"
     },
     "require-dev": {
+        "jeffersongoncalves/laravel-open-hours": "^1.0",
         "larastan/larastan": "^3.0",
         "orchestra/testbench": "^10.0|^11.0",
         "pestphp/pest": "^3.7.4|^4.0",
         "pestphp/pest-plugin-laravel": "^3.0|^4.0"
+    },
+    "suggest": {
+        "jeffersongoncalves/laravel-open-hours": "Hide the widget or show it as closed outside your opening hours (config when_closed)."
     },
     "autoload": {
         "psr-4": {

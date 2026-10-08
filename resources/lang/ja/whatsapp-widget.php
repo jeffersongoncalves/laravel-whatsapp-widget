@@ -7,4 +7,5 @@ return [
     'we_are_available' => '対応可能です',
     'online' => 'オンライン',
     'icon_alt' => 'WhatsAppアイコン',
+    'offline' => 'オフライン',
 ];

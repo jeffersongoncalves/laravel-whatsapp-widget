@@ -7,4 +7,5 @@ return [
     'we_are_available' => 'نحن متاحون',
     'online' => 'متصل',
     'icon_alt' => 'أيقونة واتساب',
+    'offline' => 'غير متصل',
 ];

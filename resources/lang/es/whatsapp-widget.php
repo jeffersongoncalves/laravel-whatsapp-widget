@@ -7,4 +7,5 @@ return [
     'we_are_available' => 'Estamos disponibles',
     'online' => 'En línea',
     'icon_alt' => 'Icono de WhatsApp',
+    'offline' => 'Desconectado',
 ];

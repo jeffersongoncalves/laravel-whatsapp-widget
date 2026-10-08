@@ -28,6 +28,7 @@ This Laravel package provides a simple yet customizable WhatsApp widget for your
 - 🌐 **Localization support**: Easily translate the widget to any language
 - 🔄 **Pre-defined messages**: Set default text messages for each agent
 - 🖼️ **Custom agent avatars**: Add profile pictures for each agent
+- 🕘 **Opening hours**: Hide the widget, or show it as closed, outside your business hours (with [laravel-open-hours](https://github.com/jeffersongoncalves/laravel-open-hours))
 
 ## Screenshots
 
@@ -45,6 +46,28 @@ This Laravel package provides a simple yet customizable WhatsApp widget for your
 
 ### Redirect Page
 ![Redirect Page](screenshots/whatsapp-widget-redirect-page.png)
+
+### Opening hours
+
+Install [jeffersongoncalves/laravel-open-hours](https://github.com/jeffersongoncalves/laravel-open-hours) (or [filament-open-hours](https://github.com/jeffersongoncalves/filament-open-hours) to edit the schedule from a panel) and tell the widget what to do while you're closed:
+
+```bash
+composer require jeffersongoncalves/laravel-open-hours
+php artisan migrate
+```
+
+```php
+// config/whatsapp-widget.php
+'when_closed' => 'closed', // null (default) | 'hide' | 'closed'
+```
+
+| Value | Outside opening hours |
+|---|---|
+| `null` | Nothing changes — opening hours are ignored |
+| `'hide'` | The widget is not rendered |
+| `'closed'` | The widget stays, the header reads "Closed · opens Monday at 09:00", agents show as offline and the sound alert is skipped |
+
+Without laravel-open-hours installed the setting has no effect.
 
 ## Requirements
 
@@ -283,6 +306,28 @@ You can replace the default icons with your own by pointing the `icons` array to
 When a user clicks on an agent, they are redirected to a temporary page before being sent to WhatsApp. Its colors and icon are configurable via the `redirect` and `icons` arrays above, and the full page can be further customized by publishing the package views.
 
 ![Redirect Page](screenshots/whatsapp-widget-redirect-page.png)
+
+### Opening hours
+
+Install [jeffersongoncalves/laravel-open-hours](https://github.com/jeffersongoncalves/laravel-open-hours) (or [filament-open-hours](https://github.com/jeffersongoncalves/filament-open-hours) to edit the schedule from a panel) and tell the widget what to do while you're closed:
+
+```bash
+composer require jeffersongoncalves/laravel-open-hours
+php artisan migrate
+```
+
+```php
+// config/whatsapp-widget.php
+'when_closed' => 'closed', // null (default) | 'hide' | 'closed'
+```
+
+| Value | Outside opening hours |
+|---|---|
+| `null` | Nothing changes — opening hours are ignored |
+| `'hide'` | The widget is not rendered |
+| `'closed'` | The widget stays, the header reads "Closed · opens Monday at 09:00", agents show as offline and the sound alert is skipped |
+
+Without laravel-open-hours installed the setting has no effect.
 
 ## Testing
 
