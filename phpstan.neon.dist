@@ -3,8 +3,11 @@ includes:
 
 parameters:
     ignoreErrors:
+        # Package-namespaced view (whatsapp-widget::) isn't registered during analysis; only some Larastan versions flag it.
         -
             identifier: argument.type
+            path: src/Http/Controllers/RedirectController.php
+            reportUnmatched: false
     level: 5
     paths:
         - src
