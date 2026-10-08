@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.1.0 - 2026-10-07
+
+Opening hours: new `when_closed` config (`null` | `hide` | `closed`). With [jeffersongoncalves/laravel-open-hours](https://github.com/jeffersongoncalves/laravel-open-hours) installed, the widget is hidden — or shown as closed, with offline agents and no sound — outside your opening hours. Without it nothing changes.
+
 ## v2.0.0 - 2026-08-01
 
 ### Security
