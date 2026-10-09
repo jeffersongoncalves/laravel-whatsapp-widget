@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.2.0 - 2026-10-09
+
+- Every `<script>` rendered by the package carries Laravel's Vite CSP nonce when the app sets one (e.g. via laravel-security-headers), so nonce-based `script-src` policies work without `'unsafe-inline'`.
+
 ## v2.1.0 - 2026-10-07
 
 Opening hours: new `when_closed` config (`null` | `hide` | `closed`). With [jeffersongoncalves/laravel-open-hours](https://github.com/jeffersongoncalves/laravel-open-hours) installed, the widget is hidden — or shown as closed, with offline agents and no sound — outside your opening hours. Without it nothing changes.
