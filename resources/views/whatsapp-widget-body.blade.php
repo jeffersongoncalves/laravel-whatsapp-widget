@@ -47,7 +47,7 @@
                 <source src="{{ Vite::asset('resources/midia/alert.mp3', "vendor/whatsapp-widget") }}"
                         type="audio/mpeg"/>
             </audio>
-            <script type="text/javascript">
+            <script @if(\Illuminate\Support\Facades\Vite::cspNonce()) nonce="{{ \Illuminate\Support\Facades\Vite::cspNonce() }}" @endif type="text/javascript">
                 var playSingleDay = {{ json_encode(config('whatsapp-widget.play_audio_daily')) }};
                 var date = new Date();
                 date.setTime(+date + (24 * 60 * 60 * 1000));

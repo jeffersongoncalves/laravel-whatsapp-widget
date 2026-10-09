@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ __('whatsapp-widget::whatsapp-widget.redirecting_to') }} {{ $whatsappAgent->name }}...</title>
     <meta name="robots" content="noindex, nofollow">
-    <script type='text/javascript'>
+    <script @if(\Illuminate\Support\Facades\Vite::cspNonce()) nonce="{{ \Illuminate\Support\Facades\Vite::cspNonce() }}" @endif type='text/javascript'>
         /* <![CDATA[ */
         var ww_whatsapp_chat_redirect = "https://wa.me/{{ str_replace('+', '', $whatsappAgent->phone) }}?text={{ urlencode($whatsappAgent->text ?? '') }}";
         /* ]]> */
