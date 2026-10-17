@@ -22,6 +22,7 @@
     },
     "require-dev": {
         "jeffersongoncalves/laravel-open-hours": "^1.0",
+        "jeffersongoncalves/pest-plugin-database-migrations": "^1.0",
         "larastan/larastan": "^3.0",
         "orchestra/testbench": "^10.0|^11.0",
         "pestphp/pest": "^3.7.4|^4.0",
