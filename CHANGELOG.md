@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## v2.2.1 - 2026-10-17
+
+The migration now ships as `create_whatsapp_agents_table.php.stub`, like the other packages. Publishing is unchanged: `php artisan vendor:publish --tag=whatsapp-widget-migrations`.
+
 ## v2.2.0 - 2026-10-09
 
 - Every `<script>` rendered by the package carries Laravel's Vite CSP nonce when the app sets one (e.g. via laravel-security-headers), so nonce-based `script-src` policies work without `'unsafe-inline'`.
